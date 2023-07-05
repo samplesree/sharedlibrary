@@ -1,4 +1,4 @@
-def call(ip,warfile,creds){
+def call(ip,warfile){
    //  install ssh agent plugin
    sshagent(['tomcat-dev']) {
   // copy war file to tomcat-dev server
