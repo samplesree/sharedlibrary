@@ -1,6 +1,6 @@
-def call(ip,warfile){
+def call(ip,warfile,creds){
    //  install ssh agent plugin
-   sshagent(['tomcat-dev']) {
+   sshagent([creds]) {
   // copy war file to tomcat-dev server
   sh "scp -o StrictHostKeyChecking=no target/${warfile} ec2-user@${ip}:/opt/apache9/webapps"
   // restart tomcat 
